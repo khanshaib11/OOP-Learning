@@ -3,7 +3,7 @@
 2> duck typing
 """
 from abc import ABC, abstractmethod
-class Shape():
+class Shape(ABC):
     
     @abstractmethod
     def area(self):
@@ -34,8 +34,9 @@ class Square(Shape):
         
 class Pizza(Circle):
     def __init__(self,radius,topping):
-        self.radius = radius 
+        super().__init__(radius) 
         self.topping = topping  
+        
         
 #list of shapes as this are shapes
 shapes = [Circle(4), Square(5), Triangle(6,7), Pizza(15,"Pepperoni")]
