@@ -42,3 +42,19 @@ class Student:
 s1 = Student("Ali", 72)
 print(s1.is_passed())
 
+
+"""Question 4"""
+
+class Rectangle:
+    def __init__(self,length,width):
+        self.length = length 
+        self.width = width
+        
+    def area(self):
+        return self.length * self.width
+    
+rec1 = Rectangle(length=10, width=20)
+
+print(rec1.area())
+
+
